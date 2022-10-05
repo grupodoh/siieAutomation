@@ -10,4 +10,7 @@ import org.junit.runner.RunWith;
         monochrome = true,
         tags = "@humo"
 )
-public class LoginTestSuite  {}
+
+public class MenuTestSuite {
+
+}
