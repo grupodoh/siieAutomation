@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.time.Duration;
 
@@ -68,6 +69,7 @@ public class BrowserConfig {
 
     public void validateElementByText(String cssElement, String varAssert) throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath(cssElement))));
         WebElement modulo = driver.findElement(By.xpath(cssElement));
         assertEquals(modulo.getText(), varAssert);
         System.out.println("Se encontro el elemento y se validó la existencia");
